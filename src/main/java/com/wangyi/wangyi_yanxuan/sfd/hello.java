@@ -2,6 +2,6 @@ package com.wangyi.wangyi_yanxuan.sfd;
 
 public class hello {
     public static void main(String[] args) {
-        System.out.println(243423423);
+        System.out.println(2);
     }
 }
