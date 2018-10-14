@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangyi_yanxuan.mapper.UserTempMapper">
+  <resultMap id="BaseResultMap" type="com.wangyi_yanxuan.domain.UserTemp">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="starttime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="days" jdbcType="VARCHAR" property="days" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, uid, starttime, days
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_usertemp
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_usertemp
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wangyi_yanxuan.domain.UserTemp">
+    insert into t_usertemp (id, uid, starttime, 
+      days)
+    values (#{id,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{starttime,jdbcType=TIMESTAMP}, 
+      #{days,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wangyi_yanxuan.domain.UserTemp">
+    insert into t_usertemp
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="starttime != null">
+        starttime,
+      </if>
+      <if test="days != null">
+        days,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="starttime != null">
+        #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="days != null">
+        #{days,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wangyi_yanxuan.domain.UserTemp">
+    update t_usertemp
+    <set>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="starttime != null">
+        starttime = #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="days != null">
+        days = #{days,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wangyi_yanxuan.domain.UserTemp">
+    update t_usertemp
+    set uid = #{uid,jdbcType=INTEGER},
+      starttime = #{starttime,jdbcType=TIMESTAMP},
+      days = #{days,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

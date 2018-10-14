@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangyi_yanxuan.mapper.CarMapper">
+  <resultMap id="BaseResultMap" type="com.wangyi_yanxuan.domain.Car">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cid" jdbcType="INTEGER" property="cid" />
+    <result column="total" jdbcType="VARCHAR" property="total" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="no" jdbcType="VARCHAR" property="no" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, cid, total, count, no
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_car
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_car
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wangyi_yanxuan.domain.Car">
+    insert into t_car (id, cid, total, 
+      count, no)
+    values (#{id,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{total,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{no,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wangyi_yanxuan.domain.Car">
+    insert into t_car
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="cid != null">
+        cid,
+      </if>
+      <if test="total != null">
+        total,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="no != null">
+        no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cid != null">
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="total != null">
+        #{total,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="no != null">
+        #{no,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wangyi_yanxuan.domain.Car">
+    update t_car
+    <set>
+      <if test="cid != null">
+        cid = #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="total != null">
+        total = #{total,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="no != null">
+        no = #{no,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wangyi_yanxuan.domain.Car">
+    update t_car
+    set cid = #{cid,jdbcType=INTEGER},
+      total = #{total,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      no = #{no,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
