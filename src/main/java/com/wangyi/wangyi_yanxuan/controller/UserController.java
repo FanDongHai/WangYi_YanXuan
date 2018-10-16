@@ -19,10 +19,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    //登录
+    //后台登录
     @PostMapping("/userlogin.do")
     public R login(String no, String password, HttpServletRequest request){
-        User user=userService.login(no, password);
+        User user=userService.login(no, password,1);
         if(user!=null){
 
             LoginLog loginLog=new LoginLog();
