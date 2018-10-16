@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(String no, String password) {
+    public User login(String no, String password, int rid) {
         if (no == null) {
             throw new RuntimeException("用户名不能为空");
         }
@@ -46,9 +46,10 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("密码不能为空");
         }
         User user=userMapper.selectByName(no);
+
         if(user != null){
             //校验密码
-            if(Objects.equals(user.getPassword(), PassUtil.md5(password))){
+            if(Objects.equals(user.getPassword(), password)){
                 return user;
             }
         }
