@@ -6,7 +6,6 @@ import com.wangyi.wangyi_yanxuan.mapper.LoginLogMapper;
 import com.wangyi.wangyi_yanxuan.mapper.UserMapper;
 import com.wangyi.wangyi_yanxuan.service.UserService;
 import com.wangyi.wangyi_yanxuan.utils.PassUtil;
-import com.wangyi.wangyi_yanxuan.utils.ResultUtil;
 import com.wangyi.wangyi_yanxuan.vo.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
