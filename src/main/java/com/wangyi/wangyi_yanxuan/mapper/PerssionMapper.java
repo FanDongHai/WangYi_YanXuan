@@ -11,6 +11,10 @@ import java.util.List;
 
 public interface PerssionMapper {
 
+    @Select("select DISTINCT p.title from t_perssion p left join t_perssionrole pr on p.fid=pr.fid left join t_user u on pr.rid=u.rid where uid=#{uid}")
+    @ResultType(String.class)
+    List<String> queryByUid(int uid);
+
     @Delete("delete from t_function where fid = #{fid,jdbcType=INTEGER}")
     @ResultType(Integer.class)
     int deleteById(Integer fid);

@@ -37,7 +37,6 @@ public class R {
 
         return this.data;
 
-
     }
 
     public void setData(Object data) {
