@@ -15,6 +15,7 @@ public class R {
 
         return this.code;
 
+
     }
 
     public void setCode(int code) {
@@ -24,6 +25,7 @@ public class R {
     public String getMsg() {
 
         return this.msg;
+
 
     }
 
@@ -47,6 +49,7 @@ public class R {
         this.msg = msg;
         this.data = data;
     }
+
 
     public R() { }
 
