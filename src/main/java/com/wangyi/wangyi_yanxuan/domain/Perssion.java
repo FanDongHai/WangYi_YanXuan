@@ -1,7 +1,6 @@
 package com.wangyi.wangyi_yanxuan.domain;
 
 public class Perssion {
-
     private Integer fid;
 
     private String url;
@@ -51,5 +50,4 @@ public class Perssion {
     public void setIcon(String icon) {
         this.icon = icon == null ? null : icon.trim();
     }
-
 }

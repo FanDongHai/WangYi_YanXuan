@@ -1,5 +1,6 @@
 package com.wangyi.wangyi_yanxuan.service;
 
+<<<<<<< HEAD
 import com.wangyi.wangyi_yanxuan.domain.Perssion;
 import com.wangyi.wangyi_yanxuan.vo.R;
 
@@ -26,4 +27,11 @@ public interface PerssionService {
      */
     public R addPerssion(Perssion perssion);
 
+=======
+import java.util.List;
+
+public interface PerssionService {
+
+    List<String> queryByUid(int uid);
+>>>>>>> origin/master
 }

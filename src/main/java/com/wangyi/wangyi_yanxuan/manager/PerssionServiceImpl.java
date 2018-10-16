@@ -1,5 +1,6 @@
 package com.wangyi.wangyi_yanxuan.manager;
 
+<<<<<<< HEAD
 import com.wangyi.wangyi_yanxuan.domain.Perssion;
 import com.wangyi.wangyi_yanxuan.mapper.PerssionMapper;
 import com.wangyi.wangyi_yanxuan.service.PerssionService;
@@ -46,5 +47,25 @@ public class PerssionServiceImpl implements PerssionService {
             throw new RuntimeException("权限名称不能为空，请重新填写");
         }
         return ResultUtil.setRes(perssionMapper.insert(perssion));
+=======
+import com.wangyi.wangyi_yanxuan.mapper.PerssionMapper;
+import com.wangyi.wangyi_yanxuan.service.PerssionService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+
+@Service
+public class PerssionServiceImpl implements PerssionService {
+
+    @Autowired
+    private PerssionMapper perssionMapper;
+
+
+    @Override
+    public List<String> queryByUid(int uid) {
+        return perssionMapper.selectUid(uid);
+>>>>>>> origin/master
     }
 }
