@@ -11,4 +11,5 @@ public class WangyiYanxuanApplication {
     public static void main(String[] args) {
         SpringApplication.run(WangyiYanxuanApplication.class, args);
     }
+
 }
