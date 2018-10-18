@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(String no, String password, int rid) {
+    public User login(String no, String password) {
         if (no == null) {
             throw new RuntimeException("用户名不能为空");
         }
