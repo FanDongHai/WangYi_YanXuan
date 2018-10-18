@@ -11,11 +11,11 @@ import java.util.List;
 
 public interface PerssionMapper {
 
-    @Delete("delete from t_function where fid = #{fid,jdbcType=INTEGER}")
+    @Delete("delete from t_perssion where fid = #{fid,jdbcType=INTEGER}")
     @ResultType(Integer.class)
     int deleteById(Integer fid);
 
-    @Insert("insert into t_function (url, parentid, title, icon) values ( #{url,jdbcType=VARCHAR}, #{parentid,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR})")
+    @Insert("insert into t_perssion (url, parentid, title, icon) values ( #{url,jdbcType=VARCHAR}, #{parentid,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR})")
     int insert(Perssion record);
 
     @Select("select * from t_perssion")

@@ -13,7 +13,7 @@ public interface PerssionService {
      * @param id
      * @return
      */
-    public R deletePerssionById(int id);
+    public R deletePerssionById(Integer fid);
 
     /**
      * 展示所有资源

@@ -16,12 +16,12 @@ public class PerssionServiceImpl implements PerssionService {
     private PerssionMapper perssionMapper;
 
     @Override
-    public R deletePerssionById(int id) {
-        if (Integer.toString(id) == "") {
+    public R deletePerssionById(Integer fid) {
+        if (Integer.toString(fid) == "") {
             throw new RuntimeException("请选择需要删除的权限");
         }
         try {
-            return ResultUtil.setRes(perssionMapper.deleteById(id));
+            return ResultUtil.setRes(perssionMapper.deleteById(fid));
         } catch (Exception e) {
             return ResultUtil.setERROR("删除失败！");
         }
