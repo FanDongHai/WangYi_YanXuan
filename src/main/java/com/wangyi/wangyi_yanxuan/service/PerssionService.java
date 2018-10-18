@@ -10,7 +10,7 @@ public interface PerssionService {
 
 
 
-    List<String> queryByUid(int uid);
+    List<String> queryByUid(Integer uid);
     /**
      * 根据id删除Perssion对象
      *
