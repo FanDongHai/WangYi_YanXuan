@@ -10,14 +10,14 @@ public interface PerssionService {
 
 
 
-    List<String> queryByUid(int uid);
+    List<String> queryByUid(Integer uid);
     /**
      * 根据id删除Perssion对象
      *
      * @param id
      * @return
      */
-    public R deletePerssionById(int id);
+    public R deletePerssionById(Integer fid);
 
     /**
      * 展示所有资源

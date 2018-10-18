@@ -17,7 +17,7 @@ public class PerssionController {
     private PerssionService perssionService;
     // 根据id删除一个权限资源
     @GetMapping("/deletePerssionById.do")
-    public R deletePerssionById(int id){
+    public R deletePerssionById(Integer id){
         try {
             perssionService.deletePerssionById(id);
            return ResultUtil.setOK("删除成功");
@@ -51,6 +51,5 @@ public class PerssionController {
             return r;
         }
     }
-
 
 }
