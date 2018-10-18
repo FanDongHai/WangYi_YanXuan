@@ -17,6 +17,7 @@ public class RoleController {
 
     @GetMapping({"/userrole.do"})
     public R findAllRole (){
+
         List<Role> list = null;
         try {
             list = roleService.findAllRole();

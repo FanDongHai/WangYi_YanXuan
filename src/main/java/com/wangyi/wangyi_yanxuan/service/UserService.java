@@ -11,7 +11,7 @@ public interface UserService {
     //校验是否存在
     R checkName(String no);
     //登录---账号是否存在临时无效
-    User login(String no, String password, int rid);
+    User login(String no, String password);
 
     void saveLog(LoginLog loginLog);
 

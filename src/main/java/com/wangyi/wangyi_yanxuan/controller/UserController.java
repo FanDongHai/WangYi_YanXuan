@@ -22,7 +22,7 @@ public class UserController {
     //后台登录
     @PostMapping("/userlogin.do")
     public R login(String no, String password, HttpServletRequest request){
-        User user=userService.login(no, password,1);
+        User user=userService.login(no, password);
         if(user!=null){
 
             LoginLog loginLog=new LoginLog();
@@ -30,7 +30,7 @@ public class UserController {
             loginLog.setUid(user.getUid());
             userService.saveLog(loginLog);
 
-            // 设置token标记,存储账号和密码
+//            // 设置token标记,存储账号和密码
 //            UsernamePasswordToken token=new UsernamePasswordToken(no,password);
 //            Subject subject = SecurityUtils.getSubject();
 //

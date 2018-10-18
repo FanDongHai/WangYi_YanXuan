@@ -16,14 +16,14 @@ public class UserRealm extends AuthorizingRealm {
     //权限或者角色
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-//        //获取登录用户
+        //获取登录用户
 //        User user = (User)SecurityUtils.getSubject().getSession().getAttribute("user");
 //        //查询当前用户的权限
 //        List<String> title = perssionService.queryByUid(user.getUid());
 //        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
 //        info.addStringPermissions(title);
 //        return info;
-        return null;
+       return null;
     }
 
     //认证   登录校验

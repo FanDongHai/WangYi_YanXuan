@@ -7,6 +7,10 @@ import com.wangyi.wangyi_yanxuan.vo.R;
 import java.util.List;
 
 public interface PerssionService {
+
+
+
+    List<String> queryByUid(int uid);
     /**
      * 根据id删除Perssion对象
      *
