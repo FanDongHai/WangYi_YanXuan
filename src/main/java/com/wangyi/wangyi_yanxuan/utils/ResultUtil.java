@@ -1,14 +1,15 @@
 package com.wangyi.wangyi_yanxuan.utils;
 
+
 import com.wangyi.wangyi_yanxuan.vo.R;
 
 public class ResultUtil {
 
 
-    /**
-     *@Author feri
-     *@Date Created in 2018/10/12 11:37
-     */
+/**
+ *@Author feri
+ *@Date Created in 2018/10/12 11:37
+ */
 
 
 

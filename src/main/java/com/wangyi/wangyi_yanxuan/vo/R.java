@@ -1,7 +1,12 @@
 package com.wangyi.wangyi_yanxuan.vo;
 
-public class R {
 
+/**
+ *@Author feri
+ *@Date Created in 2018/10/12 11:36
+ */
+
+public class R {
     private int code;
     private String msg;
     private Object data;
