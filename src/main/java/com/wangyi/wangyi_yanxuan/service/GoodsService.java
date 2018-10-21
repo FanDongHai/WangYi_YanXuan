@@ -1,11 +1,15 @@
 package com.wangyi.wangyi_yanxuan.service;
 
 import com.wangyi.wangyi_yanxuan.domain.Commodity;
-import com.wangyi.wangyi_yanxuan.domain.Grade;
 
 import java.util.List;
+import java.util.Map;
 
 public interface GoodsService {
-    boolean save (Commodity commodity);
-    List<Commodity> queryByPage();
+     public  boolean save (Commodity commodity);
+     public  List<Commodity> findByPage(int page,int limit) ;
+     public  void  updateCommodityById(Commodity commodity);
+     public  void  delete(int cid);
+     public  List<Commodity> selectCommodity( );
+     public int countToCommodity();
 }
