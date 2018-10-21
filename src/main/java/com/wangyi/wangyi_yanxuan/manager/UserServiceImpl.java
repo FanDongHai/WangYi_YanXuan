@@ -11,6 +11,7 @@ import com.wangyi.wangyi_yanxuan.vo.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
 
 
@@ -61,5 +62,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveLog(LoginLog loginLog) {
         loginLogMapper.insert(loginLog);
+    }
+
+    @Override
+    public List<User> findAllUser() {
+        List<User> list = userMapper.findAll();
+        return list;
+    }
+
+    @Override
+    public R deleteUser(int uid) {
+        return ResultUtil.setRes(userMapper.deleteUser(uid));
     }
 }

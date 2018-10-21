@@ -154,4 +154,20 @@
 
 </script>
 </body>
+
+<script type="text/javascript">
+    function loginTui(){
+        $.ajax({
+            type:"get",
+            url:"loginOut.do",
+            dataType:"json",
+            success:function(data){
+
+                if(data.code == 200) {
+                    window.location.href = "login.html";
+                }
+            }
+        })
+    }
+</script>
 </html>

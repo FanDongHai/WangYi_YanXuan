@@ -4,6 +4,8 @@ import com.wangyi.wangyi_yanxuan.domain.LoginLog;
 import com.wangyi.wangyi_yanxuan.domain.User;
 import com.wangyi.wangyi_yanxuan.vo.R;
 
+import java.util.List;
+
 public interface UserService {
 
     //注册
@@ -15,6 +17,7 @@ public interface UserService {
 
     void saveLog(LoginLog loginLog);
 
-    //List<LoginLog> findAll();
+    List<User> findAllUser();
 
+    R deleteUser(int uid);
 }
