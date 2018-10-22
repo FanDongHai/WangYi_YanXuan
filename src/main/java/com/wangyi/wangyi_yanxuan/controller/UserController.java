@@ -29,10 +29,10 @@ public class UserController {
 
         if(user!=null){
             request.getSession().setAttribute("uno", no);
-
+            // 登录成功，创建时间对象
             Date createtime = new Date();
             request.getSession().setAttribute("createtime", createtime);
-
+            // 登录日志
             LoginLog loginLog=new LoginLog();
             loginLog.setNo(no);
             loginLog.setIp(request.getRemoteAddr());
