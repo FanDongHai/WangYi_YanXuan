@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>后台登录</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- //for-mobile-apps -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- main -->
+    <div class="main">
+        <h1>
+            网易严选后台
+        </h1>
+        <form method="post" onsubmit="return false;">
+            <input type="text" name="no" value="请输入用户名" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '用户名';}"
+                   >
+            <input type="password" name="password" value="请输入密码" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '密码';}"
+                   >
+            <input type="submit" name="submit" value="登录">
+        </form>
+    </div>
+    <div class="footer">
+        <p>
+            &copy 2016 Welcome Login Form. All rights reserved
+
+        </p>
+    </div>
+    <!-- //main -->
+    <script>
+        $("form").submit(function(){
+
+            $.ajax({
+                type:"post",
+                url:"userlogin.do",
+                data:$("form").serialize(),
+                dataType:"json",
+                success:function(obj){
+                    if(obj.code == 200){
+                        alert("登录成功")
+                        window.location.href = "index.html";
+                    }else{
+                        alert("请重新输入用户名或密码");
+                    }
+                }
+            })
+        })
+
+
+    </script>
+</body>
+</html>

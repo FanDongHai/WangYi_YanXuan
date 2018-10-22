@@ -7,7 +7,7 @@ public class User {
 
     private String password;
 
-    private Integer role;
+    private Integer rid;
 
     private String phone;
 
@@ -37,12 +37,12 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public Integer getRole() {
-        return role;
+    public Integer getRid() {
+        return rid;
     }
 
-    public void setRole(Integer role) {
-        this.role = role;
+    public void setRid(Integer rid) {
+        this.rid = rid;
     }
 
     public String getPhone() {

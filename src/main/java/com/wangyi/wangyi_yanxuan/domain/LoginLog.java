@@ -5,7 +5,8 @@ import java.util.Date;
 public class LoginLog {
     private Integer id;
 
-    private Integer uid;
+    private String no;
+
 
     private Date createtime;
 
@@ -19,12 +20,12 @@ public class LoginLog {
         this.id = id;
     }
 
-    public Integer getUid() {
-        return uid;
+    public String getNo() {
+        return no;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setNo(String no) {
+        this.no = no;
     }
 
     public Date getCreatetime() {

@@ -1,17 +1,21 @@
 package com.wangyi.wangyi_yanxuan.vo;
 
-import java.util.List;
-import java.util.Map;
 
-public class R<T> {
+/**
+ *@Author feri
+ *@Date Created in 2018/10/12 11:36
+ */
+
+public class R {
     private int code;
-    private int count;
     private String msg;
-    private List<T> data;
-
+    private Object data;
 
     public int getCode() {
-        return code;
+
+        return this.code;
+
+
     }
 
     public void setCode(int code) {
@@ -19,37 +23,33 @@ public class R<T> {
     }
 
     public String getMsg() {
-        return msg;
+
+        return this.msg;
+
+
     }
 
     public void setMsg(String msg) {
         this.msg = msg;
     }
 
-    public List<T> getData() {
-        return data;
+    public Object getData() {
+
+        return this.data;
+
     }
 
-    public void setData(List<T> data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-
-    public R(int code, int count, String msg, List<T> data) {
+    public R(int code, String msg, Object data) {
         this.code = code;
-        this.count = count;
         this.msg = msg;
         this.data = data;
     }
 
-    public R() {
-    }
+
+    public R() { }
+
 }
