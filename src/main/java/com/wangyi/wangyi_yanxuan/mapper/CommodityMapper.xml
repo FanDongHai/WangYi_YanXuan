@@ -32,47 +32,47 @@
   </insert>
   <insert id="insertSelective" parameterType="com.wangyi_yanxuan.domain.Commodity">
     insert into t_commodity
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="cid != null">
-        cid,
-      </if>
-      <if test="cname != null">
-        cname,
-      </if>
-      <if test="price != null">
-        price,
-      </if>
-      <if test="intro != null">
-        intro,
-      </if>
-      <if test="imgpath != null">
-        imgpath,
-      </if>
-      <if test="gradeid != null">
-        gradeid,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="cid != null">
-        #{cid,jdbcType=INTEGER},
-      </if>
-      <if test="cname != null">
-        #{cname,jdbcType=VARCHAR},
-      </if>
-      <if test="price != null">
-        #{price,jdbcType=DECIMAL},
-      </if>
-      <if test="intro != null">
-        #{intro,jdbcType=VARCHAR},
-      </if>
-      <if test="imgpath != null">
-        #{imgpath,jdbcType=VARCHAR},
-      </if>
-      <if test="gradeid != null">
-        #{gradeid,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
+  <trim prefix="(" suffix=")" suffixOverrides=",">
+    <if test="cid != null">
+      cid,
+    </if>
+    <if test="cname != null">
+      cname,
+    </if>
+    <if test="price != null">
+      price,
+    </if>
+    <if test="intro != null">
+      intro,
+    </if>
+    <if test="imgpath != null">
+      imgpath,
+    </if>
+    <if test="gradeid != null">
+      gradeid,
+    </if>
+  </trim>
+  <trim prefix="values (" suffix=")" suffixOverrides=",">
+    <if test="cid != null">
+      #{cid,jdbcType=INTEGER},
+    </if>
+    <if test="cname != null">
+      #{cname,jdbcType=VARCHAR},
+    </if>
+    <if test="price != null">
+      #{price,jdbcType=DECIMAL},
+    </if>
+    <if test="intro != null">
+      #{intro,jdbcType=VARCHAR},
+    </if>
+    <if test="imgpath != null">
+      #{imgpath,jdbcType=VARCHAR},
+    </if>
+    <if test="gradeid != null">
+      #{gradeid,jdbcType=INTEGER},
+    </if>
+  </trim>
+</insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.wangyi_yanxuan.domain.Commodity">
     update t_commodity
     <set>
